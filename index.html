@@ -20,14 +20,12 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-</script>
-<script type="module">
-import { GithubAuthProvider } from "firebase/auth";
 
-const provider = new GithubAuthProvider();
-</script>
-<script type="module">
-import { getAuth, signInWithPopup, GithubAuthProvider } from "firebase/auth";
+  import { GithubAuthProvider } from "firebase/auth";
+
+  const provider = new GithubAuthProvider();
+
+  import { getAuth, signInWithPopup, GithubAuthProvider } from "firebase/auth";
 
 const auth = getAuth();
 signInWithPopup(auth, provider)
@@ -50,4 +48,10 @@ signInWithPopup(auth, provider)
     const credential = GithubAuthProvider.credentialFromError(error);
     // ...
   });
+</script>
+<script type="module">
+
+</script>
+<script type="module">
+
 </script>
