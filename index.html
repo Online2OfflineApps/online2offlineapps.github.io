@@ -21,13 +21,13 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 
-  import { GithubAuthProvider } from "firebase/auth";
+  import { GithubAuthProvider } from "./firebase/auth";
 
   const provider = new GithubAuthProvider();
 </script>
 
 <script type="module">
-  import { getAuth, signInWithPopup} from "firebase/auth";
+  import { getAuth, signInWithPopup} from "./firebase/auth";
 
 const auth = getAuth();
 signInWithPopup(auth, provider)
